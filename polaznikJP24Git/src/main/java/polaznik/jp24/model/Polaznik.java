@@ -7,7 +7,9 @@
 package polaznik.jp24.model;
 
 import com.sun.istack.NotNull;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity(name = "polaznik")
@@ -15,8 +17,10 @@ public class Polaznik extends Entitet{
     
     @OneToOne()
     @NotNull
+    @JoinColumn(name = "osoba")
     private Osoba osoba;
     
+    @Column(name = "brojugovora")
     private String brojUgovora;
 
     public Osoba getOsoba() {

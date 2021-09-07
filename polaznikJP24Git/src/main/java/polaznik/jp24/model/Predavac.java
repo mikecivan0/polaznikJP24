@@ -8,6 +8,7 @@ package polaznik.jp24.model;
 
 import com.sun.istack.NotNull;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 
@@ -24,6 +25,7 @@ public class Predavac extends Entitet{
     
     @OneToOne()
     @NotNull
+    @JoinColumn(name = "osoba")
     private Osoba osoba;
     
     private String iban;

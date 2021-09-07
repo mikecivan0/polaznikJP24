@@ -19,14 +19,14 @@ public abstract class Entitet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private Long id;
+    private Long sifra;
 
-    public Long getId() {
-        return id;
+    public Long getSifra() {
+        return sifra;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setSifra(Long sifra) {
+        this.sifra = sifra;
     }
     
     

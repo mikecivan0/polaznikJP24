@@ -10,6 +10,7 @@ import com.sun.istack.NotNull;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity(name = "grupa")
@@ -20,11 +21,14 @@ public class Grupa extends Entitet{
     
     @ManyToOne   
     @NotNull
+    @JoinColumn(name = "smjer")
     private Smjer smjer;
     
     @ManyToOne
+    @JoinColumn(name = "predavac")
     private Predavac predavac;
     
+    @Column(name = "datumpocetka")
     private Date datumPocetka;
 
     public String getNaziv() {
