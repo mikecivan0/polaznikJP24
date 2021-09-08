@@ -8,9 +8,13 @@ package polaznik.jp24.model;
 
 import com.sun.istack.NotNull;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity(name = "grupa")
@@ -30,6 +34,14 @@ public class Grupa extends Entitet{
     
     @Column(name = "datumpocetka")
     private Date datumPocetka;
+    
+    @ManyToMany
+    @JoinTable(
+            name = "clan",
+            joinColumns = @JoinColumn(name = "grupa"),
+            inverseJoinColumns = @JoinColumn(name = "polaznik")
+    )    
+    private Set<Polaznik> polaznici;
 
     public String getNaziv() {
         return naziv;
@@ -63,5 +75,13 @@ public class Grupa extends Entitet{
         this.datumPocetka = datumPocetka;
     }
     
+    
+    public Set<Polaznik> getPolaznici() {
+        return polaznici;
+    }
+
+    public void setPolaznici(Set<Polaznik> polaznici) {
+        this.polaznici = polaznici;
+    }
     
 }

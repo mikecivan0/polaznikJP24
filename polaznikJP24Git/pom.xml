@@ -10,13 +10,13 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
-    <dependencies>   
-            
+    <dependencies>
+
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <version>2.7.4</version>
-        </dependency>        
+        </dependency>
         
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -30,7 +30,7 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
-
-        
+     
+     
     </dependencies>
 </project>

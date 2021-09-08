@@ -7,9 +7,11 @@
 package polaznik.jp24.model;
 
 import com.sun.istack.NotNull;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 @Entity(name = "polaznik")
@@ -19,6 +21,9 @@ public class Polaznik extends Entitet{
     @NotNull
     @JoinColumn(name = "osoba")
     private Osoba osoba;
+    
+    @ManyToMany(mappedBy = "polaznici")
+    private Set<Grupa> grupe;
     
     @Column(name = "brojugovora")
     private String brojUgovora;

@@ -6,7 +6,7 @@
     <session-factory>
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mariadb://localhost:3306/edunova_jp24_hib</property>
+        <property name="connection.url">jdbc:mariadb://localhost:3306/edunova_jp24_hib_git</property>
         <property name="connection.username">edunova</property>
         <property name="connection.password">edunova</property>
         <!-- JDBC connection pool settings ... using built-in test pool -->
@@ -42,7 +42,6 @@
         <mapping class="polaznik.jp24.model.Predavac" /> 
         <mapping class="polaznik.jp24.model.Smjer" /> 
         <mapping class="polaznik.jp24.model.Grupa" /> 
-        <mapping class="polaznik.jp24.model.Clan" /> 
        
     </session-factory>
 </hibernate-configuration>
